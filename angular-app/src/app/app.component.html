@@ -59,19 +59,12 @@
       </svg>
       <h2>CS412 Angular WebApp</h2>
       <p>Responses</p><hr>
-      <p>{{text}}</p>
+      <ResponseComponent [responseData]="textValue"/>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <div class="pill-group">
-        <a class="pill" *ngFor="let item of items | keyvalue">
-          <span (click)="getData(item.key)">{{item.value}}</span>
-          <input 
-            *ngIf="determinePostReq(item.key)" 
-            [(ngModel)]="inputText" 
-            (ngModelChange)="onInputChange($event)"
-          >
-        </a>
+        <ValidatedFormComponent [initalData]="textValue"/>
       </div>
     </div>
   </div>
