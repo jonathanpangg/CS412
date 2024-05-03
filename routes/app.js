@@ -3,7 +3,7 @@ const routes = require('./ps2');
 const app = express();
 const port = 3000
 
-app.set('view engine', 'pug');
+// app.set('view engine');
 app.use('/', routes)
 
 app.listen(port, () => {

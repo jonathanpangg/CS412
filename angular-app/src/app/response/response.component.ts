@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'ResponseComponent',
@@ -10,9 +10,4 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 export class ResponseComponent {
   @Input() responseData: string | undefined
-  @Output() responseEmit = new EventEmitter<string>()
-
-  emitResponse() {
-    this.responseEmit.emit(this.responseData)
-  }
 }

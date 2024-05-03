@@ -12,11 +12,10 @@ import { FormsModule } from '@angular/forms';
 })
 
 export class ValidatedFormComponent {
-  @Input() initalData: string | undefined
+  query: string = ""
   @Output() dataEmit = new EventEmitter<string>()
 
-  emitData(event: any) {
-    this.initalData = event.target.value
-    this.dataEmit.emit(this.initalData)
+  onInputChange() {
+    this.dataEmit.emit(this.query)
   }
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -21,5 +21,10 @@ import { ResponseComponent } from './response/response.component';
 
 export class AppComponent {
   title = 'angular-app';
-  textValue = ""
+  query = ""
+
+  onInputChange(event: any) {
+    this.query = event.target.value;
+    console.log(this.query)
+  }
 }

@@ -1,3 +1,6 @@
 <link rel="stylesheet" type="text/css" src="./validated-form.component.css">
  
-<input type="text" (input)="emitData($event)" [value]="initalData">
+<form (ngSubmit)="onInputChange()">
+    <input type="text" [(ngModel)]="query" name="query">
+    <button type="submit">Submit</button>
+</form>

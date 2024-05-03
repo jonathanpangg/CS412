@@ -59,12 +59,12 @@
       </svg>
       <h2>CS412 Angular WebApp</h2>
       <p>Responses</p><hr>
-      <ResponseComponent [responseData]="textValue"/>
+      <ResponseComponent [responseData]="query"/>
     </div>
     <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <div class="pill-group">
-        <ValidatedFormComponent [initalData]="textValue"/>
+        <ValidatedFormComponent class="pill" (query)="onInputChange($event)"/>
       </div>
     </div>
   </div>
